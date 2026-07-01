@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำใบ้พี่รหัสของเมอซี่</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebe5 0%, #34a0a4 100%);
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 90%;
+            width: 550px;
+        }
+
+        h1 {
+            color: #1a535c;
+            margin-bottom: 15px;
+            font-size: 2.3rem;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .media-container {
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #f0f2f5;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* ปรับสไตล์ให้เข้ากับ GIF หรือ วิดีโอ */
+        .media-container img, .media-container video {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* ปุ่มไปต่อที่จะซ่อนไว้ใน 10 วินาทีแรก */
+        #btn-next-stage {
+            display: none; 
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 25px auto 0 auto;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            transition: background-color 0.2s ease;
+        }
+        
+        #btn-next-stage:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ดูไว้ถ้าหาพี่ไม่เจอ</h1>
+        <p>เละแบบนี้เลย!555555</p>
+
+        <div class="media-container">
+            <img src="my_hint.gif" alt="คำใบ้">
+        </div>
+
+        <button id="btn-next-stage" onclick="goToNextHint()">ไปกันต่อออออ ➡️</button>
+    </div>
+
+    <script>
+        // เมื่อหน้าเว็บโหลดเสร็จ ให้เริ่มนับเวลาถอยหลัง 10 วินาทีในระบบ (แบบไม่โชว์ตัวเลข)
+        window.onload = function() {
+            const nextBtn = document.getElementById('btn-next-stage');
+
+            // ใช้ setTimeout เพื่อสั่งให้ทำงานครั้งเดียวหลังจากผ่านไป 10,000 มิลลิวินาที (10 วินาที)
+            setTimeout(function() {
+                nextBtn.style.display = 'block'; // แสดงปุ่มสีเขียวให้ไปต่อได้
+            }, 1000); 
+        };
+        // [เพิ่มฟังก์ชัน] เมื่อกดปุ่มแล้วจะวิ่งไปหน้าวิดีโอ (hint2.html) ทันที
+        function goToNextHint() {
+            window.location.href = 'hint2.html';
+        }
+    </script>
+</body>
+</html>

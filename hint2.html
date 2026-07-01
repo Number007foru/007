@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำใบ้พี่รหัสของเมอซี่</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebe5 0%, #34a0a4 100%);
+        }
+
+        /* [ปรับปรุง] ขยายขนาดกล่องคอนเทนเนอร์ให้ใหญ่ขึ้นเต็มตา (กว้าง 850px) */
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 95%;
+            width: 850px; 
+        }
+
+        h1 {
+            color: #1a535c;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #4a5568;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .media-container {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000; /* เปลี่ยนพื้นหลังเป็นสีดำให้เหมือนโรงหนัง */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* [ปรับปรุง] เพิ่มความสูงของวิดีโอให้ใหญ่สะใจ (สูงสุด 500px) */
+        .media-container video {
+            width: 100%;
+            max-height: 500px; 
+            display: block;
+        }
+
+        /* ปุ่มไปต่อที่จะซ่อนไว้ใน 10 วินาทีแรก */
+        #btn-next-stage {
+            display: none; 
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 25px auto 0 auto;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        
+        #btn-next-stage:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>นี่คือคำใบ้! 🕵️‍♂️</h1>
+        <p>ตั้งใจดูเมอซี่!</p>
+
+        <div class="media-container">
+            <video id="hint-video" autoplay loop controls>
+                <source src="AA.mp4" type="video/mp4">
+                เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+            </video>
+        </div>
+
+        <button id="btn-next-stage" onclick="goToNextHint()">อันนี้ไม่มีอะไรให้ดูเฉยๆ ➡️</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const nextBtn = document.getElementById('btn-next-stage');
+            const video = document.getElementById('hint-video');
+
+            // สั่งเปิดเสียง (เปิดความดังไว้ที่ 100% หรือ 1.0) และสั่งให้วิดีโอเริ่มเล่นทันที
+            video.muted = false;
+            video.volume = 1.0;
+            video.play().catch(function(error) {
+                console.log("Autoplay แบบมีเสียงโดนเบราว์เซอร์บล็อกชั่วคราว: ", error);
+            });
+
+            // หน่วงเวลา 10 วินาที (10000 มิลลิวินาที) แล้วค่อยโชว์ปุ่มให้ไปต่อ
+            setTimeout(function() {
+                nextBtn.style.display = 'block';
+            }, 15000); 
+        };
+        function goToNextHint() {
+            window.location.href = 'hint3.html';
+        }
+    </script>
+</body>
+</html>
