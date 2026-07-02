@@ -87,7 +87,7 @@
 <body>
 
     <div class="container">
-        <h1 id="main-title">ยินดีต้อนรับสู่น้องเมอซี่ผู้โชคดีของพี่! 🎉</h1>
+        <h1 id="main-title">ยินดีต้อนรับน้องเมอซี่ผู้โชคดีของพี่! 🎉</h1>
         <p id="main-text">โทษทีพี่เพิ่งตื่นพร้อมจะดูคำใบ้หรือยังจ๊ะน้องรัก?</p>
         
         <div class="btn-group">
@@ -188,9 +188,9 @@
                 yesBtn.innerText = currentData.yesText;
                 noBtn.innerText = currentData.noText;
                 
-                currentStep++; // เปลี่ยนสเต็ป
+                currentStep++; 
             } else {
-                // [จุดเชื่อมลิ้งก์ไปหน้าคำใบ้] เมื่อน้องกดยืนยันผ่านด่านสุดท้ายเสร็จ ระบบจะพาข้ามหน้าทันที
+                
                 window.location.href = 'hint.html';
             }
         }
