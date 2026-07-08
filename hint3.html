@@ -237,10 +237,10 @@
             <div class="qa-title">📮 อยากรู้อะไรถามมา ตอบได้จ้าาาตอบบบบบ?</div>
             <div class="qa-subtitle">ถามได้อีกนะ พิมพ์มาเลย!</div>
 
-            <!-- ⚠️ เปลี่ยน YOUR_FORM_ID เป็นไอดี Formspree ของคุณเหมือนเดิมครับ -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <!-- เพิ่ม autocomplete="off" เพื่อป้องกันบราวเซอร์จำคำเก่า และตั้งชื่อ id ให้ฟอร์ม -->
+            <form id="qaForm" action="https://formspree.io/f/maqgvqbk" method="POST" autocomplete="off">
                 
-                <textarea name="message" placeholder="พิมพ์ข้อความตรงนี้เลยน้องรัก..." required></textarea>
+                <textarea id="qaMessage" name="message" placeholder="พิมพ์ข้อความตรงนี้เลยน้องรัก..." required></textarea>
                 
                 <!-- ส่งแล้วให้รีเฟรชกลับมาหน้าเดิม เพื่อเคลียร์ข้อความในกล่องหลังส่งเสร็จ -->
                 <input type="hidden" name="_next" value="https://number007foru.github.io/007/hint3.html">
@@ -249,6 +249,15 @@
             </form>
         </div>
     </div>
+
+    <!-- 💡 เพิ่มสคริปต์ล้างคำถามค้างคาในกล่องข้อความเมื่อเปิดหน้าเว็บ -->
+    <script>
+        window.addEventListener('pageshow', function(event) {
+            // สั่ง reset ฟอร์มทุกครั้งที่เปิดหน้านี้ หรือกดย้อนกลับมา
+            document.getElementById('qaForm').reset();
+            document.getElementById('qaMessage').value = '';
+        });
+    </script>
 
 </body>
 </html>
