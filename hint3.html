@@ -58,6 +58,7 @@
         .hint-box {
             flex: 1;
             min-width: 210px;
+            max-width: 230px; /* จำกัดขนาดความกว้างเพื่อความสวยงามเวลามีหลายช่อง */
             background: #fff5f6;
             border: 2px solid #ffe5ec;
             border-radius: 15px;
@@ -66,6 +67,7 @@
             transition: transform 0.2s ease;
             display: flex;
             flex-direction: column;
+            margin-bottom: 5px;
         }
 
         .hint-box:hover {
@@ -193,51 +195,91 @@
 
         <div class="gallery-container">
             
+            <!-- ช่องที่ 1 -->
             <div class="hint-box">
-                <!-- เพิ่มลิงก์เปิดภาพเต็มจอสำหรับรูปที่ 1 -->
                 <a href="1.png" target="_blank">
                     <img src="1.png" alt="คำใบ้ที่ 1">
                 </a>
                 <p>🔍 ผู้หญิง ไม่ใช่พี่</p>
             </div>
 
+            <!-- ช่องที่ 2 -->
             <div class="hint-box">
-                <!-- เพิ่มลิงก์เปิดภาพเต็มจอสำหรับรูปที่ 2 -->
                 <a href="2.jpg" target="_blank">
                     <img src="2.jpg" alt="คำใบ้ที่ 2">
                 </a>
-                <p>🔍 ;jkc]h;9hv'.shgvwvcx].sh Vjkqqq</p>
+                <p>🔍 จะไม่มีคำใบ้เพิ่มละน้าา สู้ๆ อย่ามอบละ</p>
             </div>
 
+            <!-- ช่องที่ 3 -->
             <div class="hint-box">
-                <!-- เพิ่มลิงก์เปิดภาพเต็มจอสำหรับรูปที่ 3 -->
                 <a href="3.jpg" target="_blank">
                     <img src="3.jpg" alt="คำใบ้ที่ 3">
                 </a>
                 <p>🔍 รหัสนักศึกษา ไม่ใช่ 6901</p>
             </div>
 
+            <!-- ช่องที่ 4 -->
             <div class="hint-box">
-                <!-- เพิ่มลิงก์เปิดภาพเต็มจอสำหรับรูปที่ 4 -->
                 <a href="5.jpg" target="_blank">
                     <img src="5.jpg" alt="คำใบ้ที่ 4">
                 </a>
                 <p>🔍 ชอบๆ</p>
             </div>
 
+            <!-- ช่องที่ 5 (ใหม่) -->
+            <div class="hint-box">
+                <a href="6.jpg" target="_blank">
+                    <img src="6.jpg" alt="คำใบ้ที่ 5">
+                </a>
+                <p>🔍 ลองเดาดู</p>
+            </div>
+
+            <!-- ช่องที่ 6 (ใหม่) -->
+            <div class="hint-box">
+                <a href="7.jpg" target="_blank">
+                    <img src="7.jpg" alt="คำใบ้ที่ 6">
+                </a>
+                <p>🔍 นึกถึงสิ่งนี้พี่มีเยอะมาก</p>
+            </div>
+
+            <!-- ช่องที่ 7 (ใหม่) -->
+            <div class="hint-box">
+                <a href="8.jpg" target="_blank">
+                    <img src="8.jpg" alt="คำใบ้ที่ 7">
+                </a>
+                <p>🔍 B6</p>
+            </div>
+
+            <!-- ช่องที่ 8 (ใหม่) -->
+            <div class="hint-box">
+                <a href="9.jpg" target="_blank">
+                    <img src="9.jpg" alt="คำใบ้ที่ 8">
+                </a>
+                <p>🔍 พี่มีเสื้อนี้ และมีแค่ 5 คนที่มีมัน</p>
+            </div>
+
+            <!-- ช่องที่ 9 (ใหม่) -->
+            <div class="hint-box">
+                <a href="10.jpg" target="_blank">
+                    <img src="10.jpg" alt="คำใบ้ที่ 9">
+                </a>
+                <p>🔍 555555</p>
+            </div>
+
         </div>
 
         <div class="notice-card">
-            <h2>⏳ โปรดติดตามตอนต่อไป...</h2>
-            <p>คำใบ้เพิ่มเติมจะมาใน <b>เร็วนี้ๆช่วงนี้พี่ติดงานช้าหน่อยนะ</b> จ้าาา!</p>
+            <h2>⏳ หาพี่ให้เจออย่ามอบนะ^^...</h2>
+            <p>คำใบ้หมดแล้ว <b>อย่ามอบน้า ถามเพิ่มได้พี่จะรีบตอบ</b> จ้าาา!</p>
         </div>
 
         <!-- 📮 เริ่มกล่องถามคำถามแบบเดิมถอดดีไซน์เป๊ะ ๆ -->
         <div class="qa-box-custom">
-            <div class="qa-title">📮 อยากรู้อะไรถามมา ตอบได้จ้าาาตอบบบบบ?</div>
-            <div class="qa-subtitle">ถามได้อีกนะ พิมพ์มาเลย!</div>
+            <div class="qa-title">📮 สงสัยตรงไหนถามมานะ</div>
+            <div class="qa-subtitle">อย่ามอบละ พิมพ์มาเลย! พี่จะรีบตอบ</div>
 
-            <!-- เพิ่ม autocomplete="off" เพื่อป้องกันบราวเซอร์จำคำเก่า และตั้งชื่อ id ให้ฟอร์ม -->
+            <!-- ⚠️ หากยังเจอปัญหามือถือส่งไม่ได้ สามารถเพิ่ม target="_blank" หลัง method="POST" ได้เลยครับ -->
             <form id="qaForm" action="https://formspree.io/f/maqgvqbk" method="POST" autocomplete="off">
                 
                 <textarea id="qaMessage" name="message" placeholder="พิมพ์ข้อความตรงนี้เลยน้องรัก..." required></textarea>
@@ -250,10 +292,9 @@
         </div>
     </div>
 
-    <!-- 💡 เพิ่มสคริปต์ล้างคำถามค้างคาในกล่องข้อความเมื่อเปิดหน้าเว็บ -->
+    <!-- 💡 สคริปต์ล้างคำถามค้างคาในกล่องข้อความเมื่อเปิดหน้าเว็บ -->
     <script>
         window.addEventListener('pageshow', function(event) {
-            // สั่ง reset ฟอร์มทุกครั้งที่เปิดหน้านี้ หรือกดย้อนกลับมา
             document.getElementById('qaForm').reset();
             document.getElementById('qaMessage').value = '';
         });

@@ -18,6 +18,7 @@
             align-items: center;
             min-height: 100vh;
             background: linear-gradient(135deg, #ffcbf2 0%, #e3f2fd 100%);
+            padding: 40px 0; /* เพิ่ม padding บน-ล่าง เพื่อให้รองรับหน้าจอแนวตั้งเวลากล่องยาวขึ้น */
         }
 
         .container {
@@ -56,7 +57,7 @@
             border: 2px solid #ffe5ec;
             border-radius: 20px;
             padding: 25px;
-            margin-bottom: 30px;
+            margin-bottom: 20px; /* ปรับลดลงนิดหน่อยเพื่อให้วางเรียงกันสามกล่องได้สวยพอดี */
             box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
         }
 
@@ -101,6 +102,7 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
+            margin-top: 15px;
         }
 
         .btn-next:hover {
@@ -121,17 +123,39 @@
         <h1>Mercy's Q&A Board</h1>
         <p class="subtitle">ตอบคำถามจากน้องเมอซี่สุดเอ็กซ์คลูซีฟ</p>
 
+        <!-- กล่อง QA ช่องที่ 1 (เดิม) -->
         <div class="qa-box">
-            <!-- ส่วนของคำถามที่น้องเคยถามมา -->
             <div class="question">
                 <span>❓</span>
                 <div><b>Q:</b> <br>พี่เป็นใคร</div>
             </div>
-            
-            <!-- ส่วนของคำตอบที่พี่รหัสตอบกลับ -->
             <div class="answer">
                 <span>💡</span>
                 <div><b>A:</b> <br>พี่เป็นพี่รหัสเอ็งไงเมอซี่ ถามแปลกๆ 555</div>
+            </div>
+        </div>
+
+        <!-- กล่อง QA ช่องที่ 2 (ใหม่) -->
+        <div class="qa-box">
+            <div class="question">
+                <span>❓</span>
+                <div><b>Q:</b> <br>พี่ชอบโทรหาเกอร์หรอคะ</div>
+            </div>
+            <div class="answer">
+                <span>💡</span>
+                <div><b>A:</b> <br>ชื่อพ่อพี่เอง เฮ้ยไม่ใช่ พี่ชอบกินเบอร์เกอร์ 555</div>
+            </div>
+        </div>
+
+        <!-- กล่อง QA ช่องที่ 3 (ใหม่) -->
+        <div class="qa-box">
+            <div class="question">
+                <span>❓</span>
+                <div><b>Q:</b> <br>เวฟ</div>
+            </div>
+            <div class="answer">
+                <span>💡</span>
+                <div><b>A:</b> <br>ใช่ไหมมมน้าาาาาาา????</div>
             </div>
         </div>
 
